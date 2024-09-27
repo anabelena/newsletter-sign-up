@@ -95,6 +95,29 @@ input::placeholder{
     border-radius: .5rem;
 }
 
+.button:hover,
+.button:focus-visible{
+    position: relative;
+    background: linear-gradient(-90deg,var(--clr-accent-400),var(--clr-accent-500));
+}
+
+form{
+    isolation: isolate;
+}
+
+.button:hover::after,
+.button:focus-visible::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: inherit;
+    border-radius: inherit;
+    translate:  0 1.5rem;
+    filter: blur(1rem);
+    opacity: .5;
+}
+
 .newsletter-cta{
 
 }
