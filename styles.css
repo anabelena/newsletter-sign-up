@@ -72,9 +72,28 @@ body{
 
 .newsletter-cta > .content{
     padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+
 }
 
 .newsletter-cta .title{
     font-size: var(--fs-900);
     font-weight: var(--fw-bold);
 }
+
+.checkmark-list{
+    display: grid;
+    gap: .625rem;
+}
+
+.checkmark-list li{
+    display: grid;
+    grid-template-columns: 2.5rem auto;
+}
+
+.checkmark-list li::before{
+    /* color: red; */
+    content: url('/assets/images/icon-list.svg');
+}
+
